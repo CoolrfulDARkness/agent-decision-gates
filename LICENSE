@@ -1,0 +1,54 @@
+# 许可 / License
+
+本仓库包含两类内容，分别授权：
+
+## 1. 正文文档（`METHODOLOGY.md`、`README.md`、`AUDIT_RESPONSE.md` 等 Markdown 文件）
+
+**Creative Commons Attribution 4.0 International (CC BY 4.0)**
+
+你可以自由地共享（复制、分发）与改编（修改、商用），条件是**署名**：注明来源为本仓库，
+并附上许可链接。完整的许可原文见：
+<https://creativecommons.org/licenses/by/4.0/legalcode>
+
+选择 CC BY 4.0 的理由：本文是**经验性方法论文档**，价值在于被引用与被反驳；
+要求署名是唯一合理的约束，不应附加"相同方式共享"之类会阻碍内部复用的条件。
+
+## 2. 代码（`tools/` 下的脚本）
+
+**MIT License**
+
+```
+Copyright (c) 2026 the METHODOLOGY contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
+## 关于文中实例
+
+文中所有案例均已**脱敏**：隐去团队名、对手名、平台名、芯片型号、年份与人数。
+数字保留（它们是证据），但**不含任何可识别到具体赛事、组织或个人的信息**。
+
+若你认为某处脱敏不足，请开 issue，我们会进一步降低精度。
+
+## 免责
+
+本文是**经验记录**，不是工程保证。全部结论来自单一项目，**零跨项目验证**；
+作者明确声明"修了也不会赢"。将其作为任何形式的性能或成功承诺引用，均属误用。
