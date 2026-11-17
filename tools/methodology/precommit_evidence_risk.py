@@ -68,27 +68,24 @@ import sys
 
 
 def _ensure_ascii_safe_stdout():
-    """Never crash on a narrow console codepage (Windows GBK / cp437).
+    """Force stdout to UTF-8, unconditionally.
 
-    All emitted text is Chinese + ASCII. GBK encodes Chinese fine; a Western
-    codepage (cp437/cp1252) cannot encode CJK at all. Reconfigure lazily and only
-    when the current encoding actually fails, so a UTF-8 terminal keeps its
-    behaviour.
+    Why not probe first: a cp936 (GBK) console CAN encode Chinese, so a
+    "can the current encoding represent our text?" guard concludes there is
+    nothing to do and then emits GBK bytes. Those become mojibake the moment
+    output is redirected to a file or runs in CI - exactly where a tool like this
+    gets used. Probing only ever protected cp437/cp1252.
+
+    Matches the convention used by audit_mem_width.py (L38) in the same repo.
+
+    Trade-off, stated plainly: on a legacy GBK console the Chinese may now render
+    as mojibake unless the code page is UTF-8 (`chcp 65001`). Redirected output and
+    CI are correct. Correct bytes win over pretty console.
     """
-    enc = (getattr(sys.stdout, "encoding", "") or "").lower()
-    probe = "\u8bc1\u636e"
-    try:
-        probe.encode(enc or "ascii")
-        return
-    except (LookupError, UnicodeEncodeError):
-        pass
     try:
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     except Exception:
-        try:
-            sys.stdout.reconfigure(errors="replace")
-        except Exception:
-            pass
+        pass
 
 
 _ensure_ascii_safe_stdout()

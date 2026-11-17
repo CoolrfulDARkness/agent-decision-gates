@@ -22,7 +22,7 @@
 
 1. **"诚实写下风险"是无效机制。** 本项目有四处独立记录，风险都写对了，**四次都没拦住**。诚实装置需要**外部回签**才有否决权（§2 M7 + §3.1 的回签机制）。
 2. **"多个点全部吻合"常常是零信息。** 若"吻合"是算术必然（定义式），这列表什么也没证明。判据是一句话："若我的假设为假，这里面有几个点会不吻合？" 答 0 ⇒ 作废（§2 M2 / §3.2）。
-3. **修这些护栏不会让你赢。** 量化反事实：全部叠加后 **4.78 vs 对手 5.57**（满分 7）。护栏的作用是**不要把资源浪费在自伤上**，不是胜利保证（§1.5）。
+3. **修这些护栏不会让你赢。** 量化反事实：全部叠加后**只到满分的 68.3%，基线是 79.6%**。护栏的作用是**不要把资源浪费在自伤上**，不是胜利保证（§1.5）。
 
 ---
 
@@ -32,9 +32,9 @@
 |---|---|
 | **[METHODOLOGY.md](METHODOLOGY.md)** | **正文（唯一入口）**。§1 问题 → §1.5 负结果 → §2 七条机制 → §3 七个闸门 → §4 生效判据 → §5 边界 → §6 速查 |
 | [AUDIT_RESPONSE.md](AUDIT_RESPONSE.md) | 21 条审核意见的逐条响应（编号 → 改动 → 位置） |
-| [tools/methodology/precommit_evidence_risk.py](tools/methodology/precommit_evidence_risk.py) | §3.1 闸门的**可运行**检查器，`--selftest` 自证；检查 F1~F6 六类失败 |
+| [tools/methodology/precommit_evidence_risk.py](tools/methodology/precommit_evidence_risk.py) | §3.1 闸门的**可运行**检查器，`--selftest` 自证；检查 F1~F7 七类失败 |
 | [LICENSE](LICENSE) | CC BY 4.0（正文）/ MIT（脚本） |
-| [PUBLISH.md](PUBLISH.md) | 发布流程（白名单、归档、建 repo） |
+| [DECISIONS.example.md](DECISIONS.example.md) | **上手就用它**：能被脚本验证的完例，含两套词汇与「常见判失败原因」对照表 |
 
 ---
 
